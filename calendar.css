@@ -1,0 +1,122 @@
+/*******************************Calendar Top Navigation*********************************/
+div#calendar {
+  margin: 0px auto;
+  padding: 0px;
+  width: 100%;
+  font-family: Helvetica, 'Times New Roman', Times, serif;
+}
+.calendar-header {
+  width: 100%;
+  background-color: #787878;
+}
+
+.nav-header {
+  display:flex;
+  justify-content: end;
+  padding: 0px 20px;
+  align-items: center;
+}
+.prev-month,
+.next-month {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.calendar-title {
+  color: #fff;
+  font-size: 18px;
+}
+
+/*******************************Calendar Content Cells*********************************/
+.calendar-content {
+  border: 1px solid #787878;
+  border-top: none;
+}
+
+.day-label {
+  display:grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.day-label div {
+  /* margin: 0px;
+  padding: 0px;
+  margin-right: 5px;
+  float: left;
+  list-style-type: none;
+  width: 80px;
+  height: 40px; */
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  color: #000;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days of week */
+  gap: 0px;
+}
+
+/** overall width = width+padding-right**/
+.dates div {
+  /* width: 80px;
+  height: 80px; */
+  font-size: 25px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  overflow: hidden;
+}
+
+:focus {
+  outline: none;
+}
+
+.clear {
+  clear: both;
+}
+
+
+/*skt class*/
+.date-block{
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+
+  border: 1px solid #A6A6A6;
+  min-height: 150px;
+  max-height: 150px;
+  height: 150px;
+  padding: 12px;
+}
+.calendar-date{
+  display: flex;
+  justify-content: start;
+}
+.today{
+  background-color: #ECF0F8; /*blue 50*/
+  border-bottom: 4px solid #2762D4; /*blue 500*/
+}
+.weekday{
+  color:#262626; /* dark text + h5 */
+}
+.weekend{
+  color:#A6A6A6; /* light text */
+}
+.scheduled-events {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: end !important;
+}
+.event-title{
+  /* High-Fidelity/Caption - Medium */
+  color: #262626;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+}
+
